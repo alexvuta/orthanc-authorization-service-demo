@@ -1,8 +1,8 @@
 # Orthanc authorization demo
 
-Orthanc version: 1.7.2
-Authorization plugin version: 0.2.3
-Authorization service: NodeJS REST API (express)
+- Orthanc version: 1.7.2
+- Authorization plugin version: 0.2.3
+- Authorization service: NodeJS REST API (express)
 
 Header `Token: demo` will be used to authenticate all requests.
 In authorization service we will check only if header `Token` has `demo` value.
