@@ -1,0 +1,14 @@
+{
+  "name": "orthanc-authorization-api",
+  "version": "1.0.0",
+  "description": "Express authorization",
+  "author": "Alex VUTA",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "body-parser": "^1.19.0"
+  }
+}

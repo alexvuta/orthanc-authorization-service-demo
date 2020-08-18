@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  orthanc:
+    image: osimis/orthanc:20.7.2
+    volumes:
+      - ./orthanc-config/plugins.json:/etc/orthanc/plugins.json
+    ports:
+      - 8044:8042
+    environment:
+      - TRACE_ENABLED=true
+
+  authorization-server:
+    ports:
+      - 8080:8080
+    build: ./express-server

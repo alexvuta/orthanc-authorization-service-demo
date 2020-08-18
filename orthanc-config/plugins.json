@@ -1,0 +1,55 @@
+{
+  "Name": "OrthancMedicai",
+  "MetricsEnabled": true,
+  "AuthenticationEnabled": false,
+  "WebViewer": {
+    "AnnotationStorageEnabled": true,
+    "StudyDownloadEnabled": true,
+    "VideoDisplayEnabled": false,
+    "KeyImageCaptureEnabled": true,
+    "KeyboardShortcutsEnabled": true,
+    "DefaultStudyIslandsDisplayMode": "oneCol"
+  },
+  "DicomWeb": {
+    "Enable": true,
+    "Root": "/dicom-web/",
+    "EnableWado": true,
+    "WadoRoot": "/wado",
+    "Ssl": false,
+    "QidoCaseSensitive": true,
+    "Host": "localhost:8044",
+    "StudiesMetadata": "Extrapolate",
+    "StudiesMetadataExtrapolatedTags": ["AcquisitionDate"],
+    "SeriesMetadata": "Extrapolate",
+    "SeriesMetadataExtrapolatedTags": [
+      "BitsAllocated",
+      "BitsStored",
+      "Columns",
+      "HighBit",
+      "PhotometricInterpretation",
+      "PixelSpacing",
+      "PlanarConfiguration",
+      "RescaleIntercept",
+      "RescaleSlope",
+      "Rows",
+      "SOPClassUID",
+      "SamplesPerPixel",
+      "SliceThickness"
+    ]
+  },
+  "Authorization": {
+    "WebService": "http://authorization-server:8080/auth",
+    "TokenHttpHeaders": ["Token"],
+    "UncheckedResources": ["/osimis-viewer/config.js", "/system"],
+    "UncheckedFolders": [
+      "/tools/metrics-prometheus",
+      "/plugins",
+      "/app/",
+      "/wsi/app/",
+      "/osimis-viewer/app/",
+      "/osimis-viewer/languages/"
+    ],
+    "UncheckedLevels": ["patient", "series", "instances"]
+  },
+  "Plugins": ["/usr/share/orthanc/plugins"]
+}
